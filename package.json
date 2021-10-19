@@ -164,12 +164,18 @@
     "husky": "^7.0.2",
     "less": "4.1.2",
     "less-loader": "^6.0.0",
+    "lint-staged": "^11.2.3",
     "postcss": "^7.0.35",
     "postcss-cli": "^9.0.1",
     "source-map-explorer": "^2.5.2"
   },
-  "husky":{
-    "hooks":{
+  "lint-staged": {
+    "src/**/*.{ts,tsx,less,md,json}": "prettier --write",
+    "src/**/*.{ts,tsx}": "eslint --fix --ext .ts,.tsx"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
     }
   }
