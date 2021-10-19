@@ -1,13 +1,12 @@
 /*
  * @Author: D.Y.M
  * @Date: 2021-10-19 10:19:26
- * @LastEditTime: 2021-10-19 11:51:26
+ * @LastEditTime: 2021-10-19 14:46:35
  * @FilePath: /beaver/src/index.tsx
  * @Description: 
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './styles/index.less'
