@@ -1,11 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+// @ts-ignore
+import styles from './App.module.less';
+import { Button } from 'antd';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <header className="App-header">
+        <Button>sdsd</Button>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.

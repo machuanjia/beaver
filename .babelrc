@@ -1,0 +1,13 @@
+{
+  "presets": ["@babel/preset-react", ["@babel/preset-env"],"react-app"],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": "css"
+      }
+    ]
+  ]
+}
