@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from './logo.svg';
-// @ts-ignore
 import styles from './App.module.less';
 import { Button } from 'antd';
 
