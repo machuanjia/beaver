@@ -8,7 +8,6 @@ function App() {
     <div className={styles.App}>
       <header className="App-header bg-red-400">
         <Button>sdsd</Button>
-        
         <img src={logo} className="App-logo border-8" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
