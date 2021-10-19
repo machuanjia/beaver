@@ -98,6 +98,18 @@ module.exports = function (webpackEnv) {
 
   const shouldUseReactRefresh = env.raw.FAST_REFRESH;
 
+  const purgecss = require("@fullhuman/postcss-purgecss")({
+    // Specify the paths to all of the template files in your project
+    content: [
+        "./src/**/*.html",
+        "./src/**/*.jsx",
+      + "./src/**/*.tsx"
+    ],
+  
+    // Include any special characters you're using in this regular expression
+    defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+  });
+
   // common function to get style loaders
   const getStyleLoaders = (cssOptions, preProcessor) => {
     const loaders = [
@@ -124,6 +136,9 @@ module.exports = function (webpackEnv) {
           // https://github.com/facebook/create-react-app/issues/2677
           ident: 'postcss',
           plugins: () => [
+            require("tailwindcss"),
+            require("autoprefixer"),
+            ...(process.env.NODE_ENV === "production" ? [purgecss] : []),
             require('postcss-flexbugs-fixes'),
             require('postcss-preset-env')({
               autoprefixer: {

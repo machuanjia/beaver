@@ -6,9 +6,9 @@ import { Button } from 'antd';
 function App() {
   return (
     <div className={styles.App}>
-      <header className="App-header">
+      <header className="App-header bg-red-400">
         <Button>sdsd</Button>
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo border-8" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
